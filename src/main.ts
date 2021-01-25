@@ -22,6 +22,19 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import firebase from 'firebase';
+const firebaseConfig = {
+  apiKey: "AIzaSyDCDNNbNbiPYKIrZJDTX61VfudvBFWuFbE",
+  authDomain: "vueautheniticationtest.firebaseapp.com",
+  projectId: "vueautheniticationtest",
+  storageBucket: "vueautheniticationtest.appspot.com",
+  messagingSenderId: "553389616544",
+  appId: "1:553389616544:web:7c050c33e86750d61f48c5",
+  measurementId: "G-ZDL3VDY6ET"
+};
+firebase.initializeApp(firebaseConfig);
+export const db = firebase.firestore();
+export const auth = firebase.auth();
 
 const app = createApp(App)
   .use(IonicVue)
